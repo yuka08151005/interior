@@ -1,0 +1,104 @@
+@use 'global/index' as g;
+
+
+.hed {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+
+
+  .hed-title img {
+    width: 180px;
+  }
+
+  .ham {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 20;
+    cursor: pointer;
+    transition:  .5s ease;
+    
+    span {
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      right: 0;
+      background-color: #333631;
+      transition: .5s ease;
+    }
+
+    span:nth-child(1) {
+      top: 19px;
+    }
+
+    span:nth-child(2) {
+      top: 27px;
+    }
+
+    &.active span:nth-child(1) {
+      top: 19px;;
+      transform: translateY(5px) rotate(-45deg);
+      background-color: #fffaf0;
+    }
+
+    &.active span:nth-child(2) {
+      top: 27px;
+      transform: translateY(-3px) rotate(45deg);
+      background-color: #fffaf0;
+    }
+
+  }
+
+  .nav {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    width: 300px;
+    padding-top: 40px;
+    padding-left: 45px;
+    transition:  .5s ease;
+    z-index: 10;
+  }
+
+  .active.nav {
+    transform: translateX(0);
+  }
+
+  li {
+    padding-bottom: 20px;
+  }
+
+  li a {
+    color: #fffaf0;
+  }
+
+  li a:hover {
+    opacity: .8;
+  }
+}//hed
+
+#mask {
+  // transition:  .5s all;
+  display: none;
+}
+
+.active#mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  opacity: .8;
+}

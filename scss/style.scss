@@ -1,0 +1,28 @@
+
+
+@use 'global/index' as g;
+@use 'header';
+@use 'products';
+@use 'footer';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-padding: 80px;
+  color: #333;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family:'メイリオ', 'Meiryo', sans-serif;
+}
+
+li {
+  list-style: none;
+}

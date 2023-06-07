@@ -1,0 +1,39 @@
+@use 'global/index' as g;
+
+
+.footer {
+  height: 50px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  @include g.mq(sp) {
+    flex-direction: column;
+  }
+  .sns {
+    display: flex;
+    margin-bottom: 12px;
+    li a {
+      color: #333;
+    }
+
+    li {
+      padding-right: 20px;
+      font-size: 12px;
+    }
+  }
+}   
+
+  .cp {
+    font-size: 10px;
+
+  }
+
